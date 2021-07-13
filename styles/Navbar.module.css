@@ -1,0 +1,38 @@
+.navbar {
+    height          : 60px;
+    width           : 100vw;
+    background-color: rgb(100, 100, 100);
+    display         : flex;
+}
+
+@media (min-width: 400px) {
+    .navbar {
+        display: none;
+    }
+}
+
+.toolbar {
+    height     : 100%;
+    width      : 100%;
+    display    : flex;
+    align-items: center;
+}
+
+.navRight {
+    display: flex;
+    flex   : 50%;
+}
+
+.navLeft {
+    display    : flex;
+    align-items: center;
+    flex       : 50%;
+}
+
+.navRightRight {
+    flex: 50%;
+}
+
+.navRightLeft {
+    flex: 50%;
+}
