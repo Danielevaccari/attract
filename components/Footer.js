@@ -8,7 +8,7 @@ const Footer = () => {
             <div className={styles.footer}>
                 <Divider></Divider>
                 <footer className={styles.footerContent}>
-                    Copyright Daniele Vaccari
+                    Copyright ƎLLIANTE
                 </footer>
             </div>
         </>

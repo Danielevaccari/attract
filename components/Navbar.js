@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from '../styles/Navbar.module.css'
 import Link from 'next/link'
-import { IconButton } from '@material-ui/core'
+import { IconButton, Divider } from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import Badge from '@material-ui/core/Badge';
@@ -11,7 +11,7 @@ const Navbar = () => {
 
     return (
         <>
-            <nav>
+            <nav id='smallScreen'>
                 <div className={styles.navbar}>
                     <div className={styles.toolbar}>
                         <div className={styles.navLeft}>
@@ -20,7 +20,7 @@ const Navbar = () => {
                             </IconButton>
                             <Link href='/'>
                                 <a>
-                                    home
+                                    ƎLLIANTE
                                 </a>
                             </Link>
                         </div>
@@ -29,11 +29,56 @@ const Navbar = () => {
                             <div className={styles.navRightLeft}>
 
                             </div>
-                            
+
                             <div className={styles.navRightRight}>
                                 <Badge badgeContent={5}>
                                     <Link href='/cart'><ShoppingCartIcon /></Link>
                                 </Badge>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <nav id='wideScreen'>
+                <div className={styles.navbarWide}>
+                    <div className={styles.wideNavLeft}>
+                        <Link href='/'>
+                            <div className={styles.logo}>
+                                ƎLLIANTE
+                            </div>
+                        </Link>
+                    </div>
+
+                    <div className={styles.wideNavRight}>
+                        <div className={styles.wideNavRightTop}>
+                            <div className={styles.wideNavRight1}>
+
+                            </div>
+                            <div className={styles.wideNavRight2}>
+                                <Badge badgeContent={5}>
+                                    <Link href='/cart'><ShoppingCartIcon style={{ color: '#000000' }} /></Link>
+                                </Badge>
+                            </div>
+                        </div>
+
+                        <div className={styles.wideNavRightBottom}>
+                            <div className={styles.wideNavRight3}>
+
+                            </div>
+                            <div className={styles.wideNavRight4}>
+                                <div className={styles.wideNavRight4Text1}>
+                                    Lookbook
+                                    <Divider />
+                                </div>
+                                <div className={styles.wideNavRight4Text2}>
+                                    Contact
+                                    <Divider />
+                                </div>
+                                <div className={styles.wideNavRight4Text3}>
+                                    About
+                                    <Divider />
+                                </div>
                             </div>
                         </div>
                     </div>
