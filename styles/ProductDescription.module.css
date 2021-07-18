@@ -1,0 +1,50 @@
+.walls {
+    height : 100vh;
+    width  : 100vw;
+    display: flex;
+}
+
+
+
+.imageContainer {
+    flex           : 50%;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+}
+
+.productImage {
+    height: 50%;
+    width : 90%;
+}
+
+.buttonsAndInfo {
+    flex           : 50%;
+    display        : flex;
+    flex-direction : column;
+    align-items    : center;
+    justify-content: center;
+    margin         : 1%;
+}
+
+.productInfoH1 {
+    font-size: 1rem;
+}
+
+.productInfoH2 {
+    font-size: 0.7rem;
+}
+
+.productInfoH3 {
+    font-size: 0.5rem;
+}
+
+.productInfoH4 {
+    font-size: 0.4rem;
+}
+
+@media (max-width: 425px) {
+    .productImage {
+        height: 120px;
+    }
+}

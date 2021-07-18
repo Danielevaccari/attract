@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import Navbar from '../components/Navbar'
 import { Grid, makeStyles } from '@material-ui/core'
 import { createClient } from 'contentful'
 import ProductItem from '../components/ProductItem';
@@ -39,9 +40,9 @@ export default function Home({ products }) {
   return (
     <>
       <Head>
-        <title>Store</title>
+        <title>ƎLLIANTE</title>
       </Head>
-
+      <Navbar />
       <div className={styles.walls}>
         <div className={styles.container}>
           {console.log(products)}
