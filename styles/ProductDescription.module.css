@@ -28,19 +28,34 @@
 }
 
 .productInfoH1 {
+    height   : 50px;
+    width    : 100%;
     font-size: 1rem;
 }
 
 .productInfoH2 {
+    height   : 30px;
+    width    : 100%;
     font-size: 0.7rem;
 }
 
 .productInfoH3 {
+    height   : 90px;
+    width    : 100%;
     font-size: 0.5rem;
 }
 
 .productInfoH4 {
-    font-size: 0.4rem;
+    height         : 10px;
+    width          : 100%;
+    display        : flex;
+    justify-content: flex-start;
+    font-size      : 0.4rem;
+}
+
+.addToCart {
+    font-size  : 1.3rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 @media (max-width: 425px) {

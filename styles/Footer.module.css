@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Vollkorn+SC&display=swap');
 
 .footer {
-    
-    bottom  : 100px
+    height          : 100px;
+    bottom          : 100px;
+    background-color: rgba(166, 204, 208, 0.4);
 }
 
 .footerContent {

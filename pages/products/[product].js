@@ -48,7 +48,7 @@ const Product = ({ product }) => {
                     <h2 className={styles.productInfoH2}>{product.fields.categories[0].fields.title}</h2>
                     <h3 className={styles.productInfoH3}>{product.fields.productDescription}</h3>
                     <h4 className={styles.productInfoH4}>{product.fields.price}e</h4>
-
+                    <div className={styles.addToCart}>Add To Cart</div>
                 </div>
             </div>
         </>
