@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 import { createClient } from 'contentful'
 import Head from 'next/head'
 import styles from '../../styles/ProductDescription.module.css'
@@ -41,7 +42,7 @@ const Product = ({ product }) => {
             </Head>
             <div className={styles.walls}>
                 <div className={styles.imageContainer}>
-                    <img className={styles.productImage} src={product.fields.image['0'].fields.file.url}></img>
+                    <Image className={styles.productImage} src={product.fields.image['0'].fields.file.url}></Image>
                 </div>
                 <div className={styles.buttonsAndInfo}>
                     <h1 className={styles.productInfoH1}>{product.fields.productName}</h1>

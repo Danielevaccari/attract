@@ -1,13 +1,14 @@
 import React from 'react'
+import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
 const ProductItem = ({ item }) => {
     return (
         <>
                 <div className={styles.paper}>
-                    <img src={item.fields.image['0'].fields.file.url} alt='' className={styles.images}>
+                    <Image src={item.fields.image['0'].fields.file.url} alt='' className={styles.images}>
 
-                    </img>
+                    </Image>
                     <div className={styles.productInfo}>
                         {item.fields.price}e <br /> {item.fields.productName}
                     </div>
