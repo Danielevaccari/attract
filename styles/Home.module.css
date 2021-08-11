@@ -13,7 +13,7 @@
     display        : flex;
     justify-content: center;
     align-items    : center;
-    height         : 200px;
+    height         : 150px;
     align-items    : center;
     box-sizing     : border-box;
     border-radius  : 0px;
@@ -23,19 +23,19 @@
 
 @media (min-width: 435px) {
     .oneItem {
-        height: 400px;
+        height: 200px;
     }
 }
 
 @media (min-width: 1024px) {
     .oneItem {
-        height: 550px;
+        height: 350px;
     }
 }
 
 @media (min-width: 1450px) {
     .oneItem {
-        height: 900px;
+        height: 500px;
     }
 }
 
@@ -55,23 +55,6 @@
 
 .productInfo {
     display  : flex;
-    flex     : 20%;
+    height: 100px;
     font-size: 0.6em;
-}
-
-.buttons {
-    display: flex;
-    flex   : 20%;
-}
-
-.buttonsLeft {
-    flex     : 50%;
-    font-size: 0.6em;
-}
-
-.buttonsRight {
-    display        : flex;
-    flex           : 50%;
-    justify-content: flex-end;
-    margin-right   : 8px;
 }

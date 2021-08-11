@@ -110,7 +110,7 @@
 .wideNavRight2 {
     flex           : 50%;
     display        : flex;
-    justify-content: center;
+    justify-content: space-around;
     margin-top     : 65px;
 
 }

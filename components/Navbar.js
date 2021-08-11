@@ -59,6 +59,9 @@ const Navbar = () => {
                                 <Badge badgeContent={5}>
                                     <Link href='/cart'><ShoppingCartIcon style={{ color: '#000000' }} /></Link>
                                 </Badge>
+                                <Link href='/signin'>
+                                    <div>Sign In</div>
+                                </Link>
                             </div>
                         </div>
 

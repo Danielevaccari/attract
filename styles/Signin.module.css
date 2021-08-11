@@ -1,4 +1,35 @@
 .walls {
-    height: 80vh;
-    width : 100vw;
+    height         : 80vh;
+    width          : 100vw;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+}
+
+.container {
+    height         : 50%;
+    width          : 60%;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+}
+
+.formStyle {
+    display        : flex;
+    flex-direction : column;
+    justify-content: space-around;
+    height         : 100%;
+    width          : 100%;
+}
+
+.signInInput {
+    height       : 15px;
+    border       : none;
+    border-bottom: 2px solid black;
+    outline      : none;
+}
+
+.signInSubmit {
+    outline: none;
+    border : none;
 }
