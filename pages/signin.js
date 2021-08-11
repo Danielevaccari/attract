@@ -7,9 +7,9 @@ const signin = () => {
             <div className={styles.walls}>
                 <div className={styles.container}>
                     <form action='/' className={styles.formStyle}>
-                        <label for='fName'>Username</label>
+                        <label htmlFor='fName'>Username</label>
                         <input className={styles.signInInput} id='uName' type='text'></input>
-                        <label for='lName'>Password</label>
+                        <label htmlFor='lName'>Password</label>
                         <input className={styles.signInInput} id='password' type='text'></input>
                         <input type='submit' className={styles.signInSubmit}></input>
                     </form>
