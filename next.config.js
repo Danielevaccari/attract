@@ -1,6 +1,6 @@
 module.exports = {
   images: {
-    domains: ['app.contentful.com'],
+    domains: ['app.contentful.com', 'attract-steel.vercel.app'],
   },
 
 }
