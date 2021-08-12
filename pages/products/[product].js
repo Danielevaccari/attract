@@ -42,7 +42,7 @@ const Product = ({ product }) => {
             </Head>
             <div className={styles.walls}>
                 <div className={styles.imageContainer}>
-                    <Image height='200px' width='500px' className={styles.productImage} src={'http:' + product.fields.image['0'].fields.file.url}></Image>
+                    <Image height='200px' width='500px' className={styles.productImage} src={'https:' + product.fields.image['0'].fields.file.url}></Image>
                 </div>
                 <div className={styles.buttonsAndInfo}>
                     <h1 className={styles.productInfoH1}>{product.fields.productName}</h1>
