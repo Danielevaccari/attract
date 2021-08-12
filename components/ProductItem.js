@@ -6,7 +6,7 @@ const ProductItem = ({ item }) => {
     return (
         <>
             <div className={styles.paper}>
-                <Image height='400px' width='500px' src={'http:' + item.fields.image['0'].fields.file.url} alt='' className={styles.images}>
+                <Image priority height='800px' width='500px' src={'http:' + item.fields.image['0'].fields.file.url} alt='' className={styles.images}>
 
                 </Image>
                 <div className={styles.productInfo}>

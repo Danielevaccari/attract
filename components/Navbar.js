@@ -1,13 +1,33 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from '../styles/Navbar.module.css'
 import Link from 'next/link'
-import { IconButton, Divider } from '@material-ui/core'
+import { IconButton, Divider, makeStyles } from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import Badge from '@material-ui/core/Badge';
+import Popper from '@material-ui/core/Popper';
 
+const useStyles = makeStyles({
+    popperStyle: {
+        height: '50px',
+        width: '50px',
+        color: 'white',
+        display: 'flex',
+        justifyContent: 'center'
+    }
+})
 
 const Navbar = () => {
+
+    const muStyles = useStyles()
+
+    const [openPopper, setOpenPopper] = useState(false)
+    const [anchorEl, setAnchroEl] = useState(null)
+
+    const changeOpenPopper = (event) => {
+        setOpenPopper(prevOpenPopper => !prevOpenPopper)
+        setAnchroEl(event.currentTarget)
+    }
 
     return (
         <>
@@ -74,9 +94,14 @@ const Navbar = () => {
                                     Lookbook
                                     <Divider />
                                 </div>
-                                <div className={styles.wideNavRight4Text2}>
+                                <div id='popperContact' onMouseOver={changeOpenPopper} onMouseLeave={changeOpenPopper} className={styles.wideNavRight4Text2}>
                                     Contact
                                     <Divider />
+                                    {/*When popperContact is hovered this component will show up above it*/}
+                                    <Popper className={muStyles.popperStyle} placement='top' anchorEl={anchorEl} open={openPopper}>
+                                        +1234567890
+                                        elliante@gmail.com
+                                    </Popper>
                                 </div>
                                 <div className={styles.wideNavRight4Text3}>
                                     About
