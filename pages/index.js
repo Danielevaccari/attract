@@ -36,6 +36,17 @@ export default function Home({ products }) {
 
   const classes = useStyles()
 
+
+  const contentfulLoader = ({ src, quality, width }) => {
+    const params = [`w=${width}`];
+  
+    if (quality) {
+      params.push(`q=${quality}`);
+    }
+  
+    return `${src}?${params.join('&')}`;
+  };
+
   return (
     <>
       <Head>
@@ -50,7 +61,7 @@ export default function Home({ products }) {
               <Grid square='true' item xs={6} md={4} key={item.sys.id}>
                 <Link href={'/products/' + item.fields.slug}>
                   <a className={styles.oneItem}>
-                    <ProductItem item={item} />
+                    <ProductItem item={item} contentfulLoader={contentfulLoader} />
                   </a>
                 </Link>
               </Grid>

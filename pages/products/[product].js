@@ -35,6 +35,17 @@ export const getStaticProps = async ({ params }) => {
 
 
 const Product = ({ product }) => {
+
+    const contentfulLoader = ({ src, quality, width }) => {
+        const params = [`w=${width}`];
+
+        if (quality) {
+            params.push(`q=${quality}`);
+        }
+
+        return `${src}?${params.join('&')}`;
+    };
+
     return (
         <>
             <Head>
@@ -42,7 +53,7 @@ const Product = ({ product }) => {
             </Head>
             <div className={styles.walls}>
                 <div className={styles.imageContainer}>
-                    <Image height='200px' width='500px' className={styles.productImage} src={'https:' + product.fields.image['0'].fields.file.url}></Image>
+                    <Image loader={contentfulLoader} height='200px' width='500px' className={styles.productImage} src={'https:' + product.fields.image['0'].fields.file.url}></Image>
                 </div>
                 <div className={styles.buttonsAndInfo}>
                     <h1 className={styles.productInfoH1}>{product.fields.productName}</h1>
