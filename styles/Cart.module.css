@@ -1,0 +1,12 @@
+.paper {
+    display       : flex;
+    flex-direction: column;
+    border-radius : 40px;
+    width         : 250px;
+}
+
+.productInfo {
+    display  : flex;
+    height   : 25px;
+    font-size: 0.7em;
+}

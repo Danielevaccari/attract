@@ -3,6 +3,9 @@ import Image from 'next/image'
 import { createClient } from 'contentful'
 import Head from 'next/head'
 import styles from '../../styles/ProductDescription.module.css'
+import { useDispatch, useSelector } from 'react-redux'
+import { increment, addToCart } from '../../reduxContent/actions'
+import NarrowNavbar from '../../components/navbar/NarrowNavbar'
 
 const client = createClient({
     space: process.env.CONTENTFUL_SPACE_ID,
@@ -36,6 +39,13 @@ export const getStaticProps = async ({ params }) => {
 
 const Product = ({ product }) => {
 
+    const dispatch = useDispatch()
+
+    const addToCartButton = () => {
+        dispatch(increment())
+        dispatch(addToCart(product))
+    }
+
     const contentfulLoader = ({ src, quality, width }) => {
         const params = [`w=${width}`];
 
@@ -51,6 +61,7 @@ const Product = ({ product }) => {
             <Head>
                 <title>ƎLLIANTE - {product.fields.productName}</title>
             </Head>
+            <NarrowNavbar />
             <div className={styles.walls}>
                 <div className={styles.imageContainer}>
                     <Image loader={contentfulLoader} height='200px' width='500px' className={styles.productImage} src={'https:' + product.fields.image['0'].fields.file.url}></Image>
@@ -60,7 +71,7 @@ const Product = ({ product }) => {
                     <h2 className={styles.productInfoH2}>{product.fields.categories[0].fields.title}</h2>
                     <h3 className={styles.productInfoH3}>{product.fields.productDescription}</h3>
                     <h4 className={styles.productInfoH4}>{product.fields.price}e</h4>
-                    <div className={styles.addToCart}>Add To Cart</div>
+                    <div onClick={addToCartButton} className={styles.addToCart}>Add To Cart</div>
                 </div>
             </div>
         </>

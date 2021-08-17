@@ -5,11 +5,13 @@ import { Divider } from '@material-ui/core'
 const Footer = () => {
     return (
         <>
-            <div className={styles.footer}>
-                <Divider></Divider>
-                <footer className={styles.footerContent}>
-                    Copyright ƎLLIANTE
-                </footer>
+            <div className={styles.walls}>
+                <Divider style={{width: '100%'}}></Divider>
+                <div className={styles.footer}>
+                    <footer className={styles.footerContent}>
+                        Copyright ƎLLIANTE
+                    </footer>
+                </div>
             </div>
         </>
     )

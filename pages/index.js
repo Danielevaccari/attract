@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import Navbar from '../components/Navbar'
+import Navbar from '../components/navbar/Navbar'
 import { Grid, makeStyles } from '@material-ui/core'
 import { createClient } from 'contentful'
 import ProductItem from '../components/ProductItem';

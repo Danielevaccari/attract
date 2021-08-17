@@ -21,6 +21,7 @@
 .navRight {
     display: flex;
     flex   : 50%;
+    align-items: center;
 }
 
 .navLeft {
