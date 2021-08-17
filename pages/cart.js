@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import { useSelector, useDispatch } from 'react-redux'
-import styles from '../styles/cart.module.css'
+import styles from '../styles/Cart.module.css'
 import Image from 'next/image'
 import { Grid, makeStyles } from '@material-ui/core'
 import NarrowNavbar from '../components/navbar/NarrowNavbar'
