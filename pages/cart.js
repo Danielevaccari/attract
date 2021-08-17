@@ -12,7 +12,7 @@ const useStyles = makeStyles({
     }
 })
 
-const cart = () => {
+const Cart = () => {
 
     const muiStyles = useStyles()
 
@@ -55,4 +55,4 @@ const cart = () => {
     )
 }
 
-export default cart
+export default Cart

@@ -61,7 +61,7 @@ const Product = ({ product }) => {
             <Head>
                 <title>ƎLLIANTE - {product.fields.productName}</title>
             </Head>
-            <NarrowNavbar />
+            <NarrowNavbar /> 
             <div className={styles.walls}>
                 <div className={styles.imageContainer}>
                     <Image loader={contentfulLoader} height='200px' width='500px' className={styles.productImage} src={'https:' + product.fields.image['0'].fields.file.url}></Image>
