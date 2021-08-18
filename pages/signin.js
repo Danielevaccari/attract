@@ -1,9 +1,11 @@
 import React from 'react'
 import styles from '../styles/Signin.module.css'
+import GlobalNavbar from '../components/navbar/GlobalNavbar'
 
 const signin = () => {
     return (
         <>
+            <GlobalNavbar />
             <div className={styles.walls}>
                 <div className={styles.container}>
                     <form action='/' className={styles.formStyle}>

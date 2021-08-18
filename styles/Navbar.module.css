@@ -19,8 +19,8 @@
 }
 
 .navRight {
-    display: flex;
-    flex   : 50%;
+    display    : flex;
+    flex       : 50%;
     align-items: center;
 }
 

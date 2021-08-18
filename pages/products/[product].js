@@ -6,6 +6,7 @@ import styles from '../../styles/ProductDescription.module.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { increment, addToCart } from '../../reduxContent/actions'
 import NarrowNavbar from '../../components/navbar/NarrowNavbar'
+import GlobalNavbar from '../../components/navbar/GlobalNavbar'
 
 const client = createClient({
     space: process.env.CONTENTFUL_SPACE_ID,
@@ -61,7 +62,7 @@ const Product = ({ product }) => {
             <Head>
                 <title>ƎLLIANTE - {product.fields.productName}</title>
             </Head>
-            <NarrowNavbar /> 
+            <GlobalNavbar />
             <div className={styles.walls}>
                 <div className={styles.imageContainer}>
                     <Image loader={contentfulLoader} height='200px' width='500px' className={styles.productImage} src={'https:' + product.fields.image['0'].fields.file.url}></Image>

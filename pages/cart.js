@@ -4,12 +4,10 @@ import { useSelector, useDispatch } from 'react-redux'
 import styles from '../styles/Cart.module.css'
 import Image from 'next/image'
 import { Grid, makeStyles } from '@material-ui/core'
-import NarrowNavbar from '../components/navbar/NarrowNavbar'
+import GlobalNavbar from '../components/navbar/GlobalNavbar'
 
 const useStyles = makeStyles({
-    gridStyle: {
-
-    }
+    
 })
 
 const Cart = () => {
@@ -34,7 +32,7 @@ const Cart = () => {
             <Head>
                 <title>cart</title>
             </Head>
-            <NarrowNavbar />
+            <GlobalNavbar />
             <div style={{ width: '100vw', minHeight: '100vh' }}>
                 <Grid container className={muiStyles.gridStyle}>
                     {cart.map(item => (
