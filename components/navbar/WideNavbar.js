@@ -65,7 +65,9 @@ const WideNavbar = () => {
                         </div>
                         <div className={styles.wideNavRight4}>
                             <div className={styles.wideNavRight4Text1}>
-                                Lookbook
+                                <Link href='/lookbook'>
+                                <div>Lookbook</div>
+                                </Link>
                                 <Divider />
                             </div>
                             <div id='popperContact' onMouseOver={changeOpenPopper} onMouseLeave={changeOpenPopper} className={styles.wideNavRight4Text2}>

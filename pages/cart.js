@@ -30,7 +30,7 @@ const Cart = () => {
     return (
         <>
             <Head>
-                <title>cart</title>
+                <title> ƎLLIANTE - cart</title>
             </Head>
             <GlobalNavbar />
             <div style={{ width: '100vw', minHeight: '100vh' }}>

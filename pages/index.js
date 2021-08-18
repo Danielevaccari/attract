@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Navbar from '../components/navbar/Navbar'
-import { Grid, makeStyles } from '@material-ui/core'
+import { Grid } from '@material-ui/core'
 import { createClient } from 'contentful'
 import ProductItem from '../components/ProductItem';
 import Link from 'next/link'
@@ -22,28 +22,16 @@ export const getStaticProps = async () => {
   }
 }
 
-const useStyles = makeStyles({
-  paper: {
-    height: '90%',
-    width: '90%',
-    display: 'flex',
-    flexDirection: 'column',
-  }
-})
-
-
 export default function Home({ products }) {
-
-  const classes = useStyles()
-
 
   const contentfulLoader = ({ src, quality, width }) => {
     const params = [`w=${width}`];
-  
+
     if (quality) {
       params.push(`q=${quality}`);
+
     }
-  
+
     return `${src}?${params.join('&')}`;
   };
 

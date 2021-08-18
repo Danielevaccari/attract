@@ -60,7 +60,7 @@ const Product = ({ product }) => {
     return (
         <>
             <Head>
-                <title>ƎLLIANTE - {product.fields.productName}</title>
+                <title>ƎLLIANTE</title>
             </Head>
             <GlobalNavbar />
             <div className={styles.walls}>
