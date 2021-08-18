@@ -44,7 +44,7 @@ const lookbook = ({ products }) => {
             <div className={styles.walls}>
                 <div className={styles.container}>
                     {products && products.map((item) => (
-                        <Image loader={contentfulLoader} height='600px' width='500px' src={'https:' + item.fields.image['0'].fields.file.url} />
+                        <Image key={item.id} loader={contentfulLoader} height='600px' width='500px' src={'https:' + item.fields.image['0'].fields.file.url} alt=''/>
                     ))}
                 </div>
             </div>
