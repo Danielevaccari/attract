@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Navbar from '../components/navbar/Navbar'
@@ -24,6 +25,16 @@ export const getStaticProps = async () => {
 
 export default function Home({ products }) {
 
+  const [name, setName] = useState('')
+
+  const handleName = () => {
+    setName(localStorage.getItem('username'))
+  }
+
+  useEffect(() => {
+    handleName()
+  }, [])
+
   const contentfulLoader = ({ src, quality, width }) => {
     const params = [`w=${width}`];
 
@@ -41,6 +52,7 @@ export default function Home({ products }) {
         <title>ƎLLIANTE</title>
       </Head>
       <Navbar />
+      {name}
       <div className={styles.walls}>
         <div className={styles.container}>
           {console.log(products)}

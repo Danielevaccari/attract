@@ -18,12 +18,16 @@ const Register = () => {
     const dispatch = useDispatch()
 
     const handleSubmit = event => {
+        //Prevent page from refreshing
         event.preventDefault()
+        //Set user state to redux
         dispatch(setUserInfo(
             document.getElementById('usernameRegister').value,
             document.getElementById('passwordRegisterConfirm').value,
             select
         ))
+        //Set user state to local storage
+        localStorage.setItem('username', document.getElementById('usernameRegister').value)
     }
 
     const handleDisableSubmitButton = () => {
@@ -61,9 +65,6 @@ const Register = () => {
                 </title>
             </Head>
             <GlobalNavbar />
-            <div>
-                {info.username}{info.password}{info.gender}
-            </div>
             <div className={styles.walls}>
                 <div className={styles.container}>
                     <form onSubmit={handleSubmit} className={styles.formStyle}>
