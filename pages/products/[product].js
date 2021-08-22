@@ -5,7 +5,6 @@ import Head from 'next/head'
 import styles from '../../styles/ProductDescription.module.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { increment, addToCart } from '../../reduxContent/actions'
-import NarrowNavbar from '../../components/navbar/NarrowNavbar'
 import GlobalNavbar from '../../components/navbar/GlobalNavbar'
 
 const client = createClient({

@@ -44,10 +44,10 @@ const lookbook = ({ products }) => {
             <div className={styles.walls}>
                 <div className={styles.container}>
                     {products && products.map((item) => (
-                        <>
-                            <Image key={item.id} loader={contentfulLoader} height='600px' width='500px' src={'https:' + item.fields.image['0'].fields.file.url} alt='' />
+                        <div key={item.id}>
+                            <Image loader={contentfulLoader} height='600px' width='500px' src={'https:' + item.fields.image['0'].fields.file.url} alt='' />
                             <span>{item.fields.productDescription}</span>
-                        </>
+                        </div>
                     ))}
                 </div>
             </div>

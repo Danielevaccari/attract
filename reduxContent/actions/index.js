@@ -25,3 +25,21 @@ export const removeFromCart = () => {
         type: 'REMOVED_FROM_CART'
     }
 }
+
+//User reducer
+export const setUserInfo = (username, password, gender) => {
+    return {
+        type: 'USER_INFO_SET',
+        payload: {
+            uname: username,
+            pword: password,
+            sex: gender
+        }
+    }
+}
+
+export const deleteUserInfo = () => {
+    return {
+        type: 'USER_INFO_DELETED'
+    }
+}

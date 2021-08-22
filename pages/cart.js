@@ -3,16 +3,10 @@ import Head from 'next/head'
 import { useSelector, useDispatch } from 'react-redux'
 import styles from '../styles/Cart.module.css'
 import Image from 'next/image'
-import { Grid, makeStyles } from '@material-ui/core'
+import { Grid } from '@material-ui/core'
 import GlobalNavbar from '../components/navbar/GlobalNavbar'
 
-const useStyles = makeStyles({
-    
-})
-
 const Cart = () => {
-
-    const muiStyles = useStyles()
 
     const cart = useSelector(state => state.cartReducer)
 
@@ -34,7 +28,7 @@ const Cart = () => {
             </Head>
             <GlobalNavbar />
             <div style={{ width: '100vw', minHeight: '100vh' }}>
-                <Grid container className={muiStyles.gridStyle}>
+                <Grid container>
                     {cart.map(item => (
                         <Grid key={item.id} item xs={4}>
                             <div style={{ margin: '5%' }}>

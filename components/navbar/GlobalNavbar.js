@@ -24,8 +24,8 @@ const GlobalNavbar = () => {
                 <div className={styles.navbar}>
                     <div className={styles.toolbar}>
                         <div className={styles.navLeft}>
-                            <IconButton disableRipple>
-                                <MenuIcon onClick={() => setOpen(true)} />
+                            <IconButton onClick={() => setOpen(true)} disableRipple>
+                                <MenuIcon />
                             </IconButton>
                             {/* Menu opened by the three lines icon */}
                             <Drawer open={open} anchor='left' onClose={() => setOpen(false)}>
