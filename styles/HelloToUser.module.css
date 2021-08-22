@@ -1,0 +1,8 @@
+.walls {
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    height          : 30px;
+    width           : 100vw;
+    background-color: rgb(181, 245, 242);
+}

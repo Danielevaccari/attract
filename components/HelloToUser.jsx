@@ -1,10 +1,24 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import styles from '../styles/HelloToUser.module.css'
 
 const HelloToUser = () => {
-    return (
-        <div>
 
-        </div>
+    const [name, setName] = useState('')
+
+    const handleName = () => {
+        setName(localStorage.getItem('username'))
+    }
+
+    useEffect(() => {
+        handleName()
+    }, [])
+
+    return (
+        <>
+            <div className={styles.walls} id='hellomessagetouser'>
+                Hey {name} !
+            </div>
+        </>
     )
 }
 

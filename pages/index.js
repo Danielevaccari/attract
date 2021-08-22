@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Navbar from '../components/navbar/Navbar'
@@ -6,6 +6,7 @@ import { Grid } from '@material-ui/core'
 import { createClient } from 'contentful'
 import ProductItem from '../components/ProductItem';
 import Link from 'next/link'
+import HelloToUser from '../components/HelloToUser'
 //This is the href='/'
 
 export const getStaticProps = async () => {
@@ -25,16 +26,6 @@ export const getStaticProps = async () => {
 
 export default function Home({ products }) {
 
-  const [name, setName] = useState('')
-
-  const handleName = () => {
-    setName(localStorage.getItem('username'))
-  }
-
-  useEffect(() => {
-    handleName()
-  }, [])
-
   const contentfulLoader = ({ src, quality, width }) => {
     const params = [`w=${width}`];
 
@@ -52,7 +43,7 @@ export default function Home({ products }) {
         <title>ƎLLIANTE</title>
       </Head>
       <Navbar />
-      {name}
+      <HelloToUser />
       <div className={styles.walls}>
         <div className={styles.container}>
           {console.log(products)}
