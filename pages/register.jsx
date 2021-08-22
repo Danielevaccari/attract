@@ -8,7 +8,7 @@ import { TextField, Select, MenuItem, InputLabel, FormControl, Button } from '@m
 import { Alert, AlertTitle } from '@material-ui/lab'
 
 
-const register = () => {
+const Register = () => {
 
     const [select, setSelect] = useState('man')
     const [passwordError, setPasswordError] = useState(false)
@@ -94,4 +94,4 @@ const register = () => {
     )
 }
 
-export default register
+export default Register
