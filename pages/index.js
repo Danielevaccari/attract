@@ -42,8 +42,9 @@ export default function Home({ products }) {
       <Head>
         <title>ƎLLIANTE</title>
       </Head>
-      <Navbar />
+      {/* This renders if user has made an account and declared an username */}
       <HelloToUser />
+      <Navbar />
       <div className={styles.walls}>
         <div className={styles.container}>
           {console.log(products)}

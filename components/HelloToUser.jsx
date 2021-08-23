@@ -3,7 +3,7 @@ import styles from '../styles/HelloToUser.module.css'
 
 const HelloToUser = () => {
 
-    const [name, setName] = useState('')
+    const [name, setName] = useState()
 
     const handleName = () => {
         setName(localStorage.getItem('username'))
@@ -15,9 +15,9 @@ const HelloToUser = () => {
 
     return (
         <>
-            <div className={styles.walls} id='hellomessagetouser'>
-                Hey {name} !
-            </div>
+            {name && <div className={styles.walls} data-testid='hellomessagetouser'>
+                Hi {name} !
+            </div>}
         </>
     )
 }
