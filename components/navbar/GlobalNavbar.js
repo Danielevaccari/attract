@@ -41,10 +41,14 @@ const GlobalNavbar = () => {
                                         Contact
                                     </ListItem>
                                     <ListItem>
-                                        About
+                                        <Link href='/signin'>
+                                            <div style={{ fontSize: '0.7rem' }}>Sign In</div>
+                                        </Link>
                                     </ListItem>
                                 </List>
                             </Drawer>
+                        </div>
+                        <div className={styles.navMiddle}>
                             <Link href='/'>
                                 <a style={{ textDecoration: 'none', color: 'black' }}>
                                     ƎLLIANTE
@@ -54,9 +58,7 @@ const GlobalNavbar = () => {
 
                         <div className={styles.navRight}>
                             <div className={styles.navRightLeft}>
-                                <Link href='/signin'>
-                                    <div style={{ fontSize: '0.7rem' }}>Sign In</div>
-                                </Link>
+
                             </div>
 
                             <div className={styles.navRightRight}>

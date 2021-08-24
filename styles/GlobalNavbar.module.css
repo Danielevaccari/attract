@@ -14,14 +14,20 @@
 
 .navRight {
     display    : flex;
-    flex       : 50%;
+    flex       : 20%;
     align-items: center;
+}
+
+.navMiddle {
+    display        : flex;
+    flex           : 60%;
+    justify-content: center;
 }
 
 .navLeft {
     display    : flex;
     align-items: center;
-    flex       : 50%;
+    flex       : 20%;
 }
 
 .navRightRight {
