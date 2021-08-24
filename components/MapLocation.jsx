@@ -19,7 +19,7 @@ export default class MapLocation extends Component {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(this.coordinates, this.error)
         } else {
-            alert('Location not available')
+            alert('Location is not available')
         }
     }
 
