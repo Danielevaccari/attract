@@ -5,7 +5,6 @@ import styles from '../styles/Cart.module.css'
 import Image from 'next/image'
 import { Grid } from '@material-ui/core'
 import GlobalNavbar from '../components/navbar/GlobalNavbar'
-import MapLocation from '../components/MapLocation'
 
 const Cart = () => {
 
@@ -28,7 +27,6 @@ const Cart = () => {
                 <title> ƎLLIANTE - cart</title>
             </Head>
             <GlobalNavbar />
-            <MapLocation />
             <div style={{ width: '100vw', minHeight: '100vh' }}>
                 <Grid container>
                     {cart.map(item => (

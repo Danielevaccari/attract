@@ -16,6 +16,9 @@ const Footer = () => {
         }
     }
 
+
+    
+
     return (
         <>
             <div className={styles.walls}>
