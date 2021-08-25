@@ -54,10 +54,6 @@ const NarrowNavbar = () => {
                             </Link>
                         </div>
                         <div className={styles.navRight}>
-                            <div className={styles.navRightLeft}>
-
-                            </div>
-
                             <div className={styles.navRightRight}>
                                 <Badge badgeContent={cartQuantity}>
                                     <Link href='/cart'><ShoppingCartIcon /></Link>

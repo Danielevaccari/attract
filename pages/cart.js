@@ -6,10 +6,18 @@ import Image from 'next/image'
 import { Grid } from '@material-ui/core'
 import GlobalNavbar from '../components/navbar/GlobalNavbar'
 import MapLocation from '../components/MapLocation'
+import HighlightOffIcon from '@material-ui/icons/HighlightOff'
+import { removeFromCart, decrement } from '../reduxContent/actions/index'
 
 const Cart = () => {
 
+    const dispatch = useDispatch()
     const cart = useSelector(state => state.cartReducer)
+
+    const handleRemoveFromCart = (id) => {
+        dispatch(removeFromCart(id))
+        dispatch(decrement())
+    }
 
     const contentfulLoader = ({ src, quality, width }) => {
         const params = [`w=${width}`];
@@ -38,7 +46,8 @@ const Cart = () => {
 
                                 </Image>
                                 <div className={styles.productInfo}>
-                                    {item.content.product.fields.price}e <br /> {item.content.product.fields.productName}
+                                    <div className={styles.productInfoLeft}>{item.content.product.fields.price}e <br /> {item.content.product.fields.productName}</div>
+                                    <div className={styles.productInfoRight}><HighlightOffIcon onClick={() => handleRemoveFromCart(item.id)} /></div>
                                 </div>
                             </div>
                         </Grid>

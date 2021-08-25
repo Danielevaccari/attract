@@ -20,9 +20,12 @@ export const addToCart = (product) => {
     }
 }
 
-export const removeFromCart = () => {
+export const removeFromCart = (id) => {
     return {
-        type: 'REMOVED_FROM_CART'
+        type: 'REMOVED_FROM_CART',
+        payload: {
+            ID: id
+        }
     }
 }
 
