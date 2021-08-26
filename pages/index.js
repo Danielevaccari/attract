@@ -48,7 +48,7 @@ export default function Home({ products }) {
       <div className={styles.walls}>
         <div className={styles.container}>
           {console.log(products)}
-          <Grid container spacing={0}>
+          <Grid container spacing={2}>
             {products && products.map((item) => (
               <Grid square='true' item xs={6} md={4} key={item.sys.id}>
                 <Link href={'/products/' + item.fields.slug}>
@@ -58,6 +58,7 @@ export default function Home({ products }) {
                 </Link>
               </Grid>
             ))}
+
           </Grid>
         </div>
       </div>

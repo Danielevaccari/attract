@@ -1,7 +1,7 @@
 .navbar {
     height          : 60px;
     width           : 100vw;
-    background-color: rgb(100, 100, 100);
+    background-color: rgba(100, 100, 100, 0.672);
     display         : flex;
 }
 

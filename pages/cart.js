@@ -47,7 +47,7 @@ const Cart = () => {
                                 </Image>
                                 <div className={styles.productInfo}>
                                     <div className={styles.productInfoLeft}>{item.content.product.fields.price}e <br /> {item.content.product.fields.productName}</div>
-                                    <div className={styles.productInfoRight}><HighlightOffIcon onClick={() => handleRemoveFromCart(item.id)} /></div>
+                                    <div className={styles.productInfoRight}><HighlightOffIcon className={styles.removeFromcartButton} onClick={() => handleRemoveFromCart(item.id)} /></div>
                                 </div>
                             </div>
                         </Grid>

@@ -6,11 +6,13 @@ const ProductItem = ({ item, contentfulLoader }) => {
     return (
         <>
             <div className={styles.paper}>
-                <Image loader={contentfulLoader} priority height='800px' width='500px' src={'https:' + item.fields.image['0'].fields.file.url} alt='' className={styles.images}>
-
-                </Image>
+                <div className={styles.imageContainer}>
+                    <Image loader={contentfulLoader} priority height='110px' width='190px' src={'https:' + item.fields.image['0'].fields.file.url} alt='' />
+                </div>
                 <div className={styles.productInfo}>
-                    {item.fields.price}e <br /> {item.fields.productName}
+                    <div className={styles.productInfoLeft}>{item.fields.price}e <br /> {item.fields.productName}</div>
+                    <div className={styles.productInfoRight}></div>
+
                 </div>
             </div>
         </>

@@ -8,17 +8,20 @@
     align-items    : center;
     flex-direction : column;
     padding-bottom : 2%;
+    padding-top    : 2%;
+    background     : linear-gradient(to top right, rgba(25, 0, 255, 0.7), rgba(0, 229, 255, 0.3));
 }
 
 .footer {
-    height          : 100%;
-    width           : 95%;
-    bottom          : 100px;
-    color           : white;
-    background-color: rgb(0, 0, 0);
-    border-radius   : 20px;
-    display         : flex;
-    justify-content : center;
+    height         : 100%;
+    width          : 95%;
+    bottom         : 100px;
+    color          : white;
+    background     : linear-gradient(to right bottom, rgba(240, 243, 242, 0.7), rgba(240, 243, 242, 0.3));
+    border-radius  : 20px;
+    display        : flex;
+    justify-content: center;
+    color          : black;
 }
 
 .footerContent {

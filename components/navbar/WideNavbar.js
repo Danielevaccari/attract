@@ -6,6 +6,8 @@ import Badge from '@material-ui/core/Badge';
 import { Divider, makeStyles } from '@material-ui/core'
 import Link from 'next/link'
 import { useSelector } from 'react-redux';
+import navbarLogo from '../../public/abstract.svg'
+import Image from 'next/image';
 
 const useStyles = makeStyles({
     popperStyle: {
@@ -47,11 +49,13 @@ const WideNavbar = () => {
                 <div className={styles.wideNavRight}>
                     <div className={styles.wideNavRightTop}>
                         <div className={styles.wideNavRight1}>
-
+                            <Image src={navbarLogo} height='100px' width='100px' />
                         </div>
                         <div className={styles.wideNavRight2}>
                             <Badge badgeContent={cartQuantity}>
-                                <Link href='/cart'><ShoppingCartIcon style={{ color: '#000000' }} /></Link>
+                                <Link href='/cart'>
+                                    <ShoppingCartIcon />
+                                </Link>
                             </Badge>
                             <Link href='/signin'>
                                 <div>Sign In</div>
@@ -66,7 +70,7 @@ const WideNavbar = () => {
                         <div className={styles.wideNavRight4}>
                             <div className={styles.wideNavRight4Text1}>
                                 <Link href='/lookbook'>
-                                <div>Lookbook</div>
+                                    <div>Lookbook</div>
                                 </Link>
                                 <Divider />
                             </div>

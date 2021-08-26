@@ -9,8 +9,6 @@ import { useSelector } from 'react-redux';
 import Drawer from '@material-ui/core/Drawer'
 import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
-import ArrowBackIcon from '@material-ui/icons/ArrowBack';
-import history from 'history';
 
 const GlobalNavbar = () => {
 
@@ -63,7 +61,7 @@ const GlobalNavbar = () => {
 
                             <div className={styles.navRightRight}>
                                 <Badge badgeContent={cartQuantity}>
-                                    <Link href='/cart'><ShoppingCartIcon /></Link>
+                                    <Link href='/cart'><ShoppingCartIcon/></Link>
                                 </Badge>
                             </div>
                         </div>
