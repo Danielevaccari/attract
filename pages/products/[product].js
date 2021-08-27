@@ -63,8 +63,11 @@ const Product = ({ product }) => {
             </Head>
             <GlobalNavbar />
             <div className={styles.walls}>
-                <div className={styles.imageContainer}>
-                    <Image loader={contentfulLoader} height='200px' width='500px' className={styles.productImage} src={'https:' + product.fields.image['0'].fields.file.url}></Image>
+                <div className={styles.imageWalls}>
+                    <div style={{ height: '60vh', width: '70vw', backgroundColor: 'rgba(205, 0, 150, 0.3)', zIndex: '3', position: 'absolute', left: '-40vw', borderRadius: '100%' }}></div>
+                    <div className={styles.imageContainer}>
+                        <Image loader={contentfulLoader} height='500px' width='500px' src={'https:' + product.fields.image['0'].fields.file.url}></Image>
+                    </div>
                 </div>
                 <div className={styles.buttonsAndInfo}>
                     <h1 className={styles.productInfoH1}>{product.fields.productName}</h1>
